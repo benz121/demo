@@ -1,0 +1,88 @@
+<!--DOCTYPE html>
+<script>
+  function add_field()
+  {
+    var total_text=document.getElementsByClassName("input_text");
+    total_text=total_text.length+1;
+    field_div = document.getElementById("field_div");
+    new_input = "<li id='input_text"+total_text+
+    "_wrapper'><input type='text' class='input_text' name='input_text[]' id='input_text"+
+    total_text+"' placeholder='Enter Text'></li>";
+    field_div.insertAdjacentHTML('beforeend',new_input);
+  }
+  function remove_field()
+  {
+    var total_text=document.getElementsByClassName("input_text");
+    document.getElementById("input_text"+total_text.length+"_wrapper").remove();
+  }
+</script>
+
+
+<div class = "container">
+  <h1>Give the words</h1>
+  <form action='/results' method="post">
+    <div id="wrapper">
+      <input type="button" value="Add TextBox" onclick="add_field();">
+      <input type="button" value="Remove TextBox" onclick="remove_field();">
+      <ol id="field_div">
+
+      </ol>
+    </div>
+    <input type='submit' value='Select'>
+  </form>
+</div-->
+
+<!DOCTYPE html>
+<html>
+   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>    
+      <title>HTML textarea Tag</title>
+      <style>
+        textarea {
+          resize: none;
+          height:200px;
+        }
+        </style>
+   </head>
+   
+
+   <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <strong><a class="navbar-brand" href="#" style="font-size: 80px; color: coral;">b3nZ</a></strong>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ url_for('search') }}" style="font-size: 40px;">Index <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('data') }}" style="font-size: 40px; color: black;">Link</a>
+            </li>
+        </ul>
+        </div>
+      </nav>
+
+</header>
+
+      <form action = "/results" method = "POST">
+        <h1>Paste u r hashes</h1>
+        <br>
+         <textarea id="w3review" placeholder="Enter URL" name="hashes" rows="4" cols="50"></textarea>
+        <br>
+         <input type = "submit" value = "submit" />
+      </form>
+   </body>
+</html>
