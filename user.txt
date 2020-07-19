@@ -1,2 +1,0 @@
-https://www.virustotal.com/ui/users/BMonday,https://www.virustotal.com/ui/most_reputed_users?limit=21&cursor=CkcKEgoKcmVwdXRhdGlvbhIECPfYDhItahFzfnZpcnVzdG90YWxjbG91ZHIYCxIPd2ViX3VzZXJwcm9maWxlGMqB0RQMGAAgAQ==
-https://www.virustotal.com/ui/users/wizzard,https://www.virustotal.com/ui/most_reputed_users?limit=21&cursor=CkcKEgoKcmVwdXRhdGlvbhIECPfYDhItahFzfnZpcnVzdG90YWxjbG91ZHIYCxIPd2ViX3VzZXJwcm9maWxlGMqB0RQMGAAgAQ==
